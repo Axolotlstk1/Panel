@@ -1,0 +1,39 @@
+Poison: 
+  name: 'Poison'
+  'action-bar': ''
+  prefix: ''
+  group: 'class'
+  mana: '&2Mana'
+  'max-level': 10
+  parent: ''
+  'needs-permission': 'true'
+  attributes: 
+    'health-base': '20'
+    'health-scale': '0'
+    'mana-base': '100'
+    'mana-scale': '0'
+    'vitality-base': '0'
+    'vitality-scale': '0'
+    'spirit-base': '0'
+    'spirit-scale': '0'
+    'intelligence-base': '0'
+    'intelligence-scale': '0'
+    'dexterity-base': '0'
+    'dexterity-scale': '0'
+    'strength-base': '0'
+    'strength-scale': '0'
+  'mana-regen': 1.0
+  'skill-tree': 'CUSTOM'
+  blacklist: []
+  skills: 
+  - 'Poison throw'
+  - 'Poison zone'
+  - 'Poison master'
+  - 'Health'
+  icon: 'POTION'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - 'Poison'
+  'exp-source': 273
+  'combo-starters': {}

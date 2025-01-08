@@ -1,0 +1,282 @@
+'Dark hole': 
+  name: 'Dark hole'
+  type: 'Active'
+  'max-level': 1
+  'skill-req-lvl': 1
+  'needs-permission': 'false'
+  'cooldown-message': 'true'
+  attributes: 
+    'level-base': '0'
+    'level-scale': '0'
+    'cost-base': '0'
+    'cost-scale': '0'
+    'cooldown-base': '12'
+    'cooldown-scale': '0'
+    'mana-base': '0'
+    'mana-scale': '0'
+    'points-spent-req-base': '0'
+    'points-spent-req-scale': '0'
+    incompatible: 
+    - ''
+  msg: '&6{player} &2Đã dùng &6{skill}'
+  icon: 'HOPPER'
+  'icon-data': 0
+  'icon-durability': 0
+  'icon-lore': 
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '{req:level}Level: {attr:level}'
+  - '{req:cost}Cost: {attr:cost}'
+  - ''
+  - '&2Mana: {attr:mana}'
+  - '&2Cooldown: {attr:cooldown}'
+  desc: []
+  components: 
+    'Cast-0': 
+      type: 'trigger'
+      data: 
+        'icon-key': ''
+        indicator: '2D'
+      preview: 
+        enabled: 'false'
+      children: 
+        'Location-b': 
+          type: 'target'
+          data: 
+            'icon-key': ''
+            'range-base': '5'
+            'range-scale': '0'
+            ground: 'True'
+            indicator: '2D'
+            group: 'enemy'
+            wall: 'false'
+            caster: 'false'
+            invulnerable: 'false'
+          preview: 
+            enabled: 'false'
+          children: 
+            'Sound-d': 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'True'
+                sound: 'Ambient Cave'
+                'volume-base': '100'
+                'volume-scale': '0'
+                'pitch-base': '1'
+                'pitch-scale': '0'
+                indicator: '2D'
+              preview: 
+                enabled: 'false'
+              children: {}
+            'Sound-e': 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'True'
+                sound: 'Entity Endermen Teleport'
+                'volume-base': '100'
+                'volume-scale': '0'
+                'pitch-base': '1'
+                'pitch-scale': '0'
+                indicator: '2D'
+              preview: 
+                enabled: 'false'
+              children: {}
+            'Repeat-c': 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'True'
+                'repetitions-base': '10'
+                'repetitions-scale': '0'
+                period: '0.2'
+                delay: '0'
+                'stop-on-fail': 'False'
+                indicator: '2D'
+              preview: 
+                enabled: 'false'
+              children: 
+                'Area-d': 
+                  type: 'target'
+                  data: 
+                    'icon-key': ''
+                    'radius-base': '3'
+                    'radius-scale': '0'
+                    group: 'Enemy'
+                    wall: 'False'
+                    caster: 'False'
+                    'max-base': '3'
+                    'max-scale': '0'
+                    random: 'False'
+                    indicator: '2D'
+                    invulnerable: 'false'
+                  preview: 
+                    enabled: 'false'
+                  children: 
+                    'Delay-e': 
+                      type: 'mechanic'
+                      data: 
+                        'icon-key': ''
+                        counts: 'True'
+                        'delay-base': '0.05'
+                        'delay-scale': '0'
+                        indicator: '2D'
+                      preview: 
+                        enabled: 'false'
+                      children: 
+                        'Launch-f': 
+                          type: 'mechanic'
+                          data: 
+                            'icon-key': ''
+                            counts: 'True'
+                            relative: 'Target'
+                            'forward-base': '0'
+                            'forward-scale': '0'
+                            'upward-base': '-1'
+                            'upward-scale': '0'
+                            'right-base': '0'
+                            'right-scale': '0'
+                            indicator: '2D'
+                          preview: 
+                            enabled: 'false'
+                          children: {}
+                    'Damage-g': 
+                      type: 'mechanic'
+                      data: 
+                        'icon-key': ''
+                        counts: 'True'
+                        type: 'Damage'
+                        'value-base': '1.4'
+                        'value-scale': '0'
+                        true: 'False'
+                        classifier: 'default'
+                        indicator: '2D'
+                      preview: 
+                        enabled: 'false'
+                      children: {}
+                    'Potion-i': 
+                      type: 'mechanic'
+                      data: 
+                        'icon-key': ''
+                        counts: 'True'
+                        potion: 'Slow'
+                        ambient: 'True'
+                        'tier-base': '2'
+                        'tier-scale': '0'
+                        'seconds-base': '1'
+                        'seconds-scale': '0'
+                        indicator: '2D'
+                      preview: 
+                        enabled: 'false'
+                      children: {}
+            'Particle Animation-k': 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'True'
+                steps: '12'
+                frequency: '0.05'
+                angle: '3600'
+                start: '0'
+                'duration-base': '3'
+                'duration-scale': '0'
+                'h-translation-base': '0'
+                'h-translation-scale': '0'
+                'v-translation-base': '0'
+                'v-translation-scale': '0'
+                'h-cycles': '1'
+                'v-cycles': '1'
+                particle: 'Icon Crack'
+                material: 'Obsidian'
+                type: '0'
+                arrangement: 'Circle'
+                'radius-base': '0'
+                'radius-scale': '0'
+                'particles-base': '1'
+                'particles-scale': '0'
+                direction: 'XZ'
+                forward: '3'
+                upward: '0.1'
+                right: '0'
+                speed: '0'
+                indicator: '2D'
+              preview: 
+                enabled: 'false'
+              children: {}
+            'Particle Animation-l': 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'True'
+                steps: '1'
+                frequency: '0.05'
+                angle: '0'
+                start: '0'
+                'duration-base': '3'
+                'duration-scale': '0'
+                'h-translation-base': '0'
+                'h-translation-scale': '0'
+                'v-translation-base': '0'
+                'v-translation-scale': '0'
+                'h-cycles': '1'
+                'v-cycles': '1'
+                particle: 'Town Aura'
+                arrangement: 'Circle'
+                'radius-base': '3'
+                'radius-scale': '0'
+                'particles-base': '20'
+                'particles-scale': '0'
+                direction: 'XZ'
+                'visible-radius': '25'
+                dx: '0'
+                dy: '0'
+                dz: '0'
+                speed: '1'
+                amount: '1'
+                forward: '0'
+                upward: '0'
+                right: '0'
+                indicator: '2D'
+              preview: 
+                enabled: 'false'
+              children: {}
+            'Particle Animation-e': 
+              type: 'mechanic'
+              data: 
+                'icon-key': ''
+                counts: 'True'
+                steps: '17'
+                frequency: '0.05'
+                angle: '36000'
+                start: '0'
+                'duration-base': '3'
+                'duration-scale': '0'
+                'h-translation-base': '-6'
+                'h-translation-scale': '0'
+                'v-translation-base': '0'
+                'v-translation-scale': '0'
+                'h-cycles': '1'
+                'v-cycles': '1'
+                particle: 'Icon crack'
+                material: 'Obsidian'
+                arrangement: 'Circle'
+                'radius-base': '0'
+                'radius-scale': '0'
+                'particles-base': '1'
+                'particles-scale': '0'
+                direction: 'XZ'
+                'visible-radius': '25'
+                dx: '0'
+                dy: '0'
+                dz: '0'
+                speed: '0'
+                amount: '1'
+                forward: '3'
+                upward: '0.1'
+                right: '0'
+                indicator: '2D'
+              preview: 
+                enabled: 'false'
+              children: {}

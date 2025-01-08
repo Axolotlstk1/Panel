@@ -1,0 +1,351 @@
+enabled: true
+left-click-key-preview: true
+cooldown: 0
+obtain-method: STATIC
+display:
+  type: BLOCK
+hologram-offset: 0.0
+auto-close: true
+key:
+  require: true
+  material: REDSTONE_TORCH
+  glow: false
+  amount: 1
+  name: '&6&lKey Hệ'
+  damage: 0
+  enchantments:
+  - LUCK;1
+cost: -1
+require-key-or-economy: false
+allow-skip-animation: false
+cooldown-per-location: false
+inventory-name: ''
+open:
+  crate-animation: INV_ROULETTE
+crate:
+  material: CHEST
+  glow: false
+  amount: 1
+  name: ele
+  damage: 0
+hologram:
+  lines: []
+  animation:
+    prefixes: []
+    type: NONE
+    speed: 20
+  reward-hologram: ''
+  reward-hologram-duration: 60
+  reward-hologram-yoffset: 0.0
+reward-display:
+  type: IN_ORDER
+  require-permission: false
+rewards:
+  Quyển_Trục_Hệ__Lửa:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &4&l Lửa'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Nước:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &1&l Nước'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Ánh_sáng:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &e&l Ánh sáng'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Băng:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &b&l Băng'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Bóng_tối:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &0&l Bóng tối'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Cát:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &e&l Cát'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Thép:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &9&l Thép'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Tâm_linh:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &d&l Tâm linh'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Đất:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &2&l Đất'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Cỏ:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &a&l Cỏ'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Gió:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &7&l Gió'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Điện:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &6&l Điện'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Khói:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &f&l Khói'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
+  Quyển_Trục_Hệ__Độc:
+    commands: []
+    chance: 10.0
+    rarity: default
+    give-display-item:
+      value: true
+      with-lore: true
+      with-name: true
+    display-item:
+      material: BOOK
+      glow: false
+      amount: 1
+      damage: 0
+      name: '&6Quyển Trục Hệ &5&l Độc'
+      enchantments:
+      - DURABILITY;1
+      lore:
+      - ''
+      - '&7Nhấn &7&lChuột Phải &7để học'
+      nbt-tags: '{Enchantments:[{id:"minecraft:unbreaking",lvl:1s}],HideFlags:1}'
+      item-flags:
+      - HIDE_ENCHANTS
