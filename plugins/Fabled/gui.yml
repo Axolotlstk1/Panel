@@ -1,0 +1,19 @@
+ATTRIBUTES: 
+  rows: 1
+  pages: 1
+  slots: 
+    1: 
+      dexterity: 3
+      strength: 4
+      vitality: 0
+      spirit: 1
+      intelligence: 2
+stMagma: 
+  rows: 4
+  pages: 1
+  slots: 
+    1: 
+      'magma fist': 18
+      'magma eruption': 9
+      'magma clap': 0
+      'magma meteor': 27
