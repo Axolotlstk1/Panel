@@ -1,0 +1,91 @@
+SkeK:
+  Type: WITHER_SKELETON
+  Display: '&8Hiệp Sĩ Xương &f[&c45&f]'
+  Health: 45
+  Damage: 8
+  Equipment:
+  - IRON_HELMET HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS
+  - IRON_BOOTS FEET
+  - IRON_SWORD HAND
+  - SHIELD OFFHAND
+  Drops:
+  - money 8
+  - skillapi-exp 15
+  LevelModifiers:
+  - health 5
+  - damage 0.5
+  Options:
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+SkeletonKing:
+  Type: WITHER_SKELETON
+  Display: '&6Skeleton King'
+  Health: 1000
+  Damage: 10
+  Skills:
+  - skill{s=SummonSkeletons} @self 0.1
+  - skill{s=SmashAttack} @target 0.2
+  Equipment:
+  - KingsCrown HEAD
+  - SkeletonKingSword HAND
+  Drops:
+  - SkeletonKingDrops
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.5
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    Despawn: false
+    FollowRange: 255
+Ske:
+  Type: SKELETON
+  Display: '&8Xương Khô &f[&c20&f]'
+  Health: 20
+  Damage: 3
+  Drops:
+  - skillapi-exp 6
+  - money 3
+  Options:
+    MovementSpeed: 0.1
+    PreventOtherDrops: true
+Zom:
+  Type: ZOMBIE
+  Display: '&8Xác Sống &f[&c20&f]'
+  Health: 20
+  Damage: 5
+  Drops:
+  - skillapi-exp 6
+  - money 3
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+Cre:
+  Type: CREEPER
+  Display: '&8Quái Nổ &f[&c20&f]'
+  Health: 20
+  Drops:
+  - skillapi-exp 7
+  - money 4
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+Spi:
+  Type: SPIDER
+  Display: '&8Nhện &f[&c18&f]'
+  Health: 18
+  Damage: 2
+  Drops:
+  - skillapi-exp 8
+  - money 4
+  Options:
+    MovementSpeed: 0.5
+    PreventOtherDrops: true
+DUMMY:
+  Type: HUSK
+  Display: '&fDUMMY &f[&c35&f]'
+  Health: 35
+  Options:
+    MovementSpeed: 0.1
+    PreventOtherDrops: true

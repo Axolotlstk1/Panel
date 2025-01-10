@@ -1,0 +1,32 @@
+limit: 5
+active: 1
+health: 20.0
+mana: 100.0
+accounts: 
+  acc1: 
+    classes: 
+      Thunder: 
+        level: 1
+        points: 1
+        exp: 24.0
+    skills: 
+      'Thunder zone': 
+        level: 0
+      Health: 
+        level: 1
+      'Thunder lightning': 
+        level: 1
+      'Thunder god': 
+        level: 0
+    binds: {}
+    bar: 
+      enabled: 'true'
+      slots: 
+      - 1
+      - 2
+      - 3
+      - 4
+      'Thunder lightning': 1
+      Health: 2
+    hunger: 1.0
+    persistent: {}

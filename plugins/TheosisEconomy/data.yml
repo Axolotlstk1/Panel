@@ -1,0 +1,25 @@
+players:
+  b1616f7d-20ba-3499-aea3-59ab27d4941c:
+    balance: '242'
+    acceptingPayments: true
+    lastKnownUsername: axolotlstk
+  83d13815-7be9-34e5-8506-8e318b6cac81:
+    balance: '0'
+    acceptingPayments: true
+    lastKnownUsername: STAFF
+  4c56fcaa-fb79-377c-8991-d79d86c941c3:
+    balance: '0'
+    acceptingPayments: true
+    lastKnownUsername: Ootakemaru
+  cdc24be6-c148-354a-b542-6eae2a2f3bde:
+    balance: '0'
+    acceptingPayments: true
+    lastKnownUsername: LaiLaGumayusi
+  85e30f95-4f10-3d8a-87e8-f07064f0b954:
+    balance: '0'
+    acceptingPayments: true
+    lastKnownUsername: ditmemay
+  1cb57a4c-934f-325b-9491-095e67e6928d:
+    balance: '0'
+    acceptingPayments: true
+    lastKnownUsername: StickWhite
