@@ -1,0 +1,31 @@
+limit: 10
+active: 1
+health: 21.0
+mana: 161.0
+accounts: 
+  acc1: 
+    classes: 
+      Ice: 
+        level: 1
+        points: 0
+        exp: 0.0
+    skills: 
+      'Ice age': 
+        level: 0
+      'Ice throw': 
+        level: 0
+      Health: 
+        level: 1
+      'Ice spike': 
+        level: 0
+    binds: {}
+    bar: 
+      enabled: 'true'
+      slots: 
+      - 1
+      - 2
+      - 3
+      - 4
+      Health: 1
+    hunger: 1.0
+    persistent: {}
