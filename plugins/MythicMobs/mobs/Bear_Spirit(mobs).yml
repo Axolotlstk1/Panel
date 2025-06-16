@@ -1,0 +1,78 @@
+BearSpirit:
+  Type: Zombie
+  Faction: Forest
+  Health: 200
+  Display: '&2Bear &aspirit'
+  Modules:
+    ThreatTable: true
+  Options:
+    Silent: true
+    MovementSpeed: 0.33
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+  Skills:
+  - model{m=bear_spirit} @self ~onSpawn
+  - setvariable{var=caster.damage;val=10;type=INTEGER} @self ~onSpawn
+  - partvisibility{m=bear_spirit;p=sweep_effect;v=false} @self ~onSpawn
+  - cancelEvent{sync=true} @trigger ~onAttack
+  - randomskill{s=[
+                  - state{m=bear_spirit;state=hurt1;li=3;lo=4} @self
+                  ],[
+                  - state{m=bear_spirit;state=hurt2;li=3;lo=4} @self
+                  ],[
+                  - state{m=bear_spirit;state=hurt3;li=3;lo=4} @self
+                  ],[
+                  - state{m=bear_spirit;state=hurt4;li=3;lo=4} @self
+                  ],} @self ~onDamaged
+  - randomskill{s=[
+                  - sound{s=oakforest:bear_spirit.hurt;v=0.5;p=1.2}
+                  ],[
+                  - sound{s=oakforest:bear_spirit.hurt;v=0.5;p=1}
+                  ],[
+                  - sound{s=oakforest:bear_spirit.hurt;v=0.5;p=0.9}
+                  ],[
+                  - sound{s=oakforest:bear_spirit.hurt;v=0.5;p=0.8}
+                  ];cooldown=0.7} @self ~onDamaged
+  - effect:particles{p=reddust;color=#41802e;a=4;hs=0.9;vs=0.7;y=0.7} @self ~onTimer:3
+  - effect:particles{p=end_rod;a=1;hs=0.8;vs=0.4;y=0.4} @ModelPart{m=bear_spirit;p=anklers} ~onTimer:6 0.3
+  - sound{s=oakforest:bear_spirit.death;v=0.6} @self ~onDeath
+  
+  - skill{s=BearSFuriousRoar} @self ~onEnterCombat
+  - skill{s=[
+            - cancelEvent
+            - skill{s=BearSAttack} ?!hasaura{aura=SkillCasting}
+            ];sync=true} @target ~onTimer:4 ?targetwithin{d=3.5}
+  - skill{s=BearSNatureRecover} ~onTimer:20 0.3 ?!hasaura{aura=SkillCasting}
+  - skill{s=BearLeap} @target ~onTimer:10 ?!hasaura{aura=SkillCasting} ?!targetwithin{d=3} ?incombat 0.4
+  - skill{s=[
+            - delay 41
+            - sound{s=block.grass.fall;p=0.1} @self
+            - sound{s=block.grass.break;p=0.1;v=0.2} @self
+            - effect:particles{p=block_crack;m=grass;a=70;y=0.1;hs=1.5;vs=0.1}
+            ]} @self ~onDeath
+  
+ForestSpiritSpawner:
+  Type: silverfish
+  Options:
+    NoAI: true
+    Silent: true
+    Invisible: true
+  Skills:
+  - sound{s=oakforest:bear_spirit.nature_summon;v=0.1} @self ~onSpawn
+  - effect:particles{p=reddust;color=#269600;a=3;hs=0.3;vs=0.1;y=0.2} @self ~onSpawn
+  - effect:particlering{p=reddust;color=#269600;a=1;r=1;y=0.2} @self ~onSpawn
+  - effect:particles{p=reddust;color=#269600;a=3;hs=0.3;vs=0.1;y=0.2} @self ~onTimer:3
+  - effect:particlering{p=reddust;color=#269600;a=1;r=1;y=0.1} @self ~onTimer:3
+  - skill{s=[
+            - summon{t=ForestSpirit1;a=1}
+            - remove
+            ];delay=9} @self ~onTimer:2
+            
+ForestSpirit1:
+  Template: ForestSpirit
+  Faction: Forest
+  Skills:
+  - remove{delay=700;repeat=5;repeatInterval=1} @self ~onSpawn
+  - effect:particles{p=reddust;color=#3b6032;a=2;hs=0.25;vs=0.25;y=0.125} @self ~onTimer:5

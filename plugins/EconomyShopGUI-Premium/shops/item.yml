@@ -1,0 +1,26 @@
+pages:
+  page1:
+    items:
+      '1':
+        displaylore:
+        - ''
+        - '&7Nhấn &8&lChuột Phải &7để kích hoạt'
+        - '&2Sẽ giúp bạn nhật được max level của hệ mà bạn đang dùng ngay lập tức'
+        material: END_CRYSTAL
+        buy: 500.0
+        sell: -1.0
+        displayname: §e§lMAX LEVEL
+        enchantments:
+        - unbreaking:1
+        NBTData: '{HideFlags:1,display:{Lore:[''{"text":""}'',''{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Nhấn
+          "},{"bold":true,"italic":false,"color":"dark_gray","text":"Chuột Phải "},{"bold":false,"italic":false,"color":"gray","text":"để
+          kích hoạt"}],"text":""}'',''{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_green","text":"Sẽ
+          giúp bạn nhật được max level của hệ mà bạn đang dùng ngay lập tức"}],"text":""}''],Name:''{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"MAX
+          LEVEL"}],"text":""}''}}'
+      '5':
+        material: SCUTE
+        buy: 500.0
+        sell: -1.0
+        displayname: §e§lVật Siêu Chế Tạo
+        NBTData: '{display:{Name:''{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Vật
+          Siêu Chế Tạo"}],"text":""}''}}'

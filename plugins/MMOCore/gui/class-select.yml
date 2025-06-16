@@ -1,0 +1,59 @@
+
+# GUI display name
+name: Class Selection
+
+# Number of slots in your inventory. Must be
+# between 9 and 54 and must be a multiple of 9.
+slots: 27
+
+items:
+
+    class-asassin:
+        slots: [11]
+        function: class-asassin
+        name: '&4&lSát Thủ'
+        hide-flags: true
+        lore:
+            - '{lore}'
+            - ''
+            - '{attribute-lore}'
+
+    class-mage:
+      slots: [12]
+      function: class-mage
+      name: '&5&lPháp Sư'
+      hide-flags: true
+      lore:
+        - '{lore}'
+        - ''
+        - '{attribute-lore}'
+
+    class-bow:
+      slots: [13]
+      function: class-bow
+      name: '&9&lXạ Thủ'
+      hide-flags: true
+      lore:
+        - '{lore}'
+        - ''
+        - '{attribute-lore}'
+
+    class-warrior:
+        slots: [14]
+        function: class-warrior
+        name: '&6&lHiệp Sĩ'
+        hide-flags: true
+        lore:
+            - '{lore}'
+            - ''
+            - '{attribute-lore}'
+
+    class-summoner:
+        slots: [15]
+        function: class-summoner
+        name: '&1&lTriệu Hồi Sư'
+        hide-flags: true
+        lore:
+        - '{lore}'
+        - ''
+        - '{attribute-lore}'

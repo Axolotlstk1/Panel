@@ -1,0 +1,61 @@
+{
+  "id": "e456b025-8256-4c16-b9e3-da9732b15f49",
+  "name": "1",
+  "commands": [
+    {
+      "command": "mmocore reload",
+      "gender": "CONSOLE",
+      "interval": {
+        "days": 0,
+        "hours": 0,
+        "minutes": 2,
+        "seconds": 5
+      },
+      "delay": {
+        "days": 0,
+        "hours": 0,
+        "minutes": 2,
+        "seconds": 0
+      },
+      "description": ""
+    }
+  ],
+  "interval": {
+    "days": 0,
+    "hours": 0,
+    "minutes": 1,
+    "seconds": 5
+  },
+  "times": [],
+  "random": 1.0,
+  "days": [
+    "MONDAY",
+    "TUESDAY",
+    "WEDNESDAY",
+    "THURSDAY",
+    "FRIDAY",
+    "SATURDAY",
+    "SUNDAY"
+  ],
+  "executionLimit": -1,
+  "timesExecuted": 580,
+  "lastExecutedCommandIndex": 0,
+  "lastExecuted": "2025-06-05T09:09:02. 449Z",
+  "commandExecutionMode": "ALL",
+  "commandExecutionInterval": {
+    "days": 0,
+    "hours": 0,
+    "minutes": 0,
+    "seconds": 1
+  },
+  "active": true,
+  "resetExecutionsAfterRestart": false,
+  "condition": {
+    "conditionType": "SIMPLE",
+    "conditions": [],
+    "simpleCondition": {
+      "conditionParamFields": []
+    }
+  },
+  "events": []
+}

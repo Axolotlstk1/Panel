@@ -1,0 +1,61 @@
+{
+  "id": "ed0ff9b1-afc7-4044-b5ac-fb50d7c9f118",
+  "name": "2",
+  "commands": [
+    {
+      "command": "kill @e[type\u003dminecraft:armor_stand]",
+      "gender": "CONSOLE",
+      "interval": {
+        "days": 0,
+        "hours": 0,
+        "minutes": 0,
+        "seconds": 0
+      },
+      "delay": {
+        "days": 0,
+        "hours": 0,
+        "minutes": 0,
+        "seconds": 0
+      },
+      "description": ""
+    }
+  ],
+  "interval": {
+    "days": 0,
+    "hours": 0,
+    "minutes": 1,
+    "seconds": 10
+  },
+  "times": [],
+  "random": 1.0,
+  "days": [
+    "MONDAY",
+    "TUESDAY",
+    "WEDNESDAY",
+    "THURSDAY",
+    "FRIDAY",
+    "SATURDAY",
+    "SUNDAY"
+  ],
+  "executionLimit": -1,
+  "timesExecuted": 535,
+  "lastExecutedCommandIndex": 0,
+  "lastExecuted": "2025-06-05T09:09:25. 386Z",
+  "commandExecutionMode": "ALL",
+  "commandExecutionInterval": {
+    "days": 0,
+    "hours": 0,
+    "minutes": 0,
+    "seconds": 1
+  },
+  "active": true,
+  "resetExecutionsAfterRestart": false,
+  "condition": {
+    "conditionType": "SIMPLE",
+    "conditions": [],
+    "simpleCondition": {
+      "conditionParamFields": []
+    }
+  },
+  "events": []
+}

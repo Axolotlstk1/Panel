@@ -1,0 +1,53 @@
+# Golden Knight Mob file
+# 
+# 
+ProjectileSwingTargeterx:
+  Type: ARMOR_STAND
+  Display: '&f[&cBOSS&f] &f[&c<caster.hp>&f] &eKẻ Gác Cổng'
+  Options:
+    NoAI: true
+    Invisible: true
+    HasGravity: false
+    Marker: true
+  Skills:
+  - skill{s=ProjectileSwingR2L1} @self ~onSpawn
+  - remove{delay=40} @self ~onSpawn
+GoldenKnight:
+  Type: iron_golem
+  Display: '&f[&cBOSS&f] &f[&c<caster.hp>&f] &eKẻ Gác Cổng'
+  Health: 680
+  Damage: 10
+  BossBar:
+    Enabled: true
+    Title: '&6&lGolden Knight'
+    Range: 50
+    Color: WHITE
+    Style: SEGMENTED_20
+  Equipment:
+  - stone_button:4
+  - stone_sword:0
+  Options:
+    PreventTransformation: true
+    PreventJockeyMounts: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    MovementSpeed: 0.3
+    AttackSpeed: 0.5
+    FollowRange: 50
+    MaxCombatDistance: 10
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=ChooseRandomAttackGoldenKnight} ~onAttack 1
+  - skill{s=ChooseRandomSkillGoldenKnight} @targetLocation ~onTimer:200
+  - skill{s=KnightRandomHurtSound} @self ~onDamaged 1
+  - sound{s=custom.knightdeath;v=0.1;sc=hostile} @self ~onDeath 1
+  - model{mid=golden_knight;n=false;h=true} @self ~onSpawn 1
+  - state{mid=golden_knight;s=capes_idle;li=0;lo=0;r=false} @self ~onSpawn 1
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged

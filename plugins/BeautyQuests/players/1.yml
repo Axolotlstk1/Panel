@@ -1,0 +1,31 @@
+identifier: b1616f7d-20ba-3499-aea3-59ab27d4941c
+pools:
+- completedQuests: !!set {}
+  poolID: 0
+  lastGive: 1740133221705
+- completedQuests: !!set {}
+  poolID: 1
+  lastGive: 1740316078778
+quests:
+- questID: 0
+  timesFinished: 6
+- questID: 1
+  timesFinished: 6
+- questID: 2
+  questFlow: 0:0
+  timesFinished: 4
+- questID: 3
+  questFlow: 0:0
+  timesFinished: 3
+- questID: 4
+  questFlow: 0:0
+  timesFinished: 2
+- questID: 5
+  currentStage: 0
+  datas:
+    starting_time: 1740316078777
+    stage0:
+      remaining:
+        b7883147-1f86-4825-ab7a-e8890b49348c: 3
+  currentBranch: 0
+  timesFinished: 2

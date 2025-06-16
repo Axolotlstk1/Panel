@@ -1,0 +1,57 @@
+ForestSpiritAttack:
+  Cooldown: 0.60
+  Skills:
+  - skill{s=ForestSpiritAttack1}
+  - skill{s=ForestSpiritAttack2}
+ForestSpiritAttack1:
+  Conditions:
+  - hasaura{aura=SecondAttack} false
+  Skills:
+  - state{m=forest_spirit;s=attack1;li=2;lo=3} @self
+  - partvisibility{m=forest_spirit;p=whip1;v=true;delay=2} @self
+  - partvisibility{m=forest_spirit;p=whip1_1;v=true;delay=2} @self
+  - partvisibility{m=forest_spirit;p=whip1;v=false;delay=14} @self
+  - partvisibility{m=forest_spirit;p=whip1_1;v=false;delay=14} @self
+  - sound{s=entity.player.attack.sweep;p=1.2;v=0.2;delay=6} @self
+  - delay 8
+  - aura{auraName=SecondAttack;d=40} @self
+  - skill{s=[
+            - damage{a=<caster.var.damage>}
+            - effect:particles{p=reddust;color=#215c23;a=7;y=0.3;hs=0.3;vs=0.3}
+            - potion{t=POISON;l=0;d=42}
+            ]} @target{conditions=[
+                                  - distance{d=0to2}
+                                  - fov{a=170}
+                                  ]}
+ForestSpiritAttack2:
+  Conditions:
+  - hasaura{aura=SecondAttack}
+  Skills:
+  - state{m=forest_spirit;s=attack2;li=2;lo=3} @self
+  - partvisibility{m=forest_spirit;p=whip2;v=true;delay=2} @self
+  - partvisibility{m=forest_spirit;p=whip1_2;v=true;delay=2} @self
+  - partvisibility{m=forest_spirit;p=whip2;v=false;delay=14} @self
+  - partvisibility{m=forest_spirit;p=whip1_2;v=false;delay=14} @self
+  - sound{s=entity.player.attack.sweep;p=1.2;v=0.2;delay=6} @self
+  - delay 8
+  - auraremove{aura=SecondAttack} @self
+  - skill{s=[
+            - damage{a=<caster.var.damage>}
+            - effect:particles{p=reddust;color=#215c23;a=7;y=0.3;hs=0.3;vs=0.3}
+            - potion{t=POISON;l=0;d=42}
+            ]} @target{conditions=[
+                                  - distance{d=2}
+                                  - fov{a=170}
+                                  ]}
+
+ForestSpiritDeath:
+  Skills:
+  - stun{d=10} @self
+  - sound{s=block.wood.break;p=1.2} @self
+  - sound{s=block.wood.break;p=0.8;delay=2} @self
+  - sound{s=block.wood.break;p=0.6;delay=4} @self
+  - partvisibility{m=forest_spirit;p=;v=false;em=false} @self
+  - partvisibility{m=forest_spirit;p=head;v=true} @self
+  - effect:particles{p=smoke;a=10;y=0.15;hs=0.1;vs=0.1;speed=0.03} @self
+  - delay 14
+  - sound{s=block.wood.fall;p=0.1;v=0.7} @self

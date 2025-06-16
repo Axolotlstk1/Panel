@@ -1,0 +1,33 @@
+pool: 1
+name: §eĐạo Tặc
+scoreboard: false
+startMessage: §6<§e§lQuests§6> §aBạn đã bắt đầu nhiệm vụ đánh §e{quest_name}
+endRewards:
+- id: skillAPI-exp
+  xp: 35
+- id: moneyReward
+  money: 27.0
+hideNoRequirements: true
+endMsg: §6<§e§lQuests§6> §aBạn đã hoàn thành nhiệm vụ §e{quest_name} §agiờ bạn có
+  thể nhận nhiệm vụ mới!
+repeatable: true
+timer: 0
+manager:
+  branches:
+    '0':
+      stages:
+        '0':
+          objects:
+            eda7366c-f1fd-4608-bd4a-468f117a44d3:
+              amount: 12
+              object:
+                factoryName: mythicMobs
+                value: K2Q1a
+            2e3f9cc1-0f03-4451-93d1-eb10821a6af4:
+              amount: 12
+              object:
+                factoryName: mythicMobs
+                value: K2Q1b
+          stageType: MOBS
+      endingStages: {}
+id: 3

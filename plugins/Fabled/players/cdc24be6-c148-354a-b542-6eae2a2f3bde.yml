@@ -1,0 +1,36 @@
+limit: 5
+active: 1
+health: 59.43876266479492
+mana: 186.0
+accounts: 
+  acc1: 
+    classes: 
+      Sand: 
+        level: 27
+        points: -33
+        exp: 960.0
+    skills: 
+      Health: 
+        level: 5
+        cd: 25
+      'Sand wither': 
+        level: 5
+      'Sand coffin': 
+        level: 5
+      'Sand storm': 
+        level: 5
+        cd: 14
+    binds: {}
+    bar: 
+      enabled: 'true'
+      slots: 
+      - 1
+      - 2
+      - 3
+      - 4
+      Health: 1
+      'Sand wither': 2
+      'Sand coffin': 3
+      'Sand storm': 4
+    hunger: 1.0
+    persistent: {}

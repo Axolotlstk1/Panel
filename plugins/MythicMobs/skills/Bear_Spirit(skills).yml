@@ -1,0 +1,140 @@
+BearSpiritStompMain:
+  Skills:
+  - effect:particles{p=block_crack;m=grass;a=8;hs=0.3;vs=0.15;y=-0.1}
+  - sound{s=block.grass.break;p=0.1;v=0.04}
+BearSpiritStompEff1:
+  Skills:
+  - skill{s=BearSpiritStompMain} @ModelPart{m=bear_spirit;p=rightforwardpaw}
+BearSpiritStompEff2:
+  Skills:
+  - skill{s=BearSpiritStompMain} @ModelPart{m=bear_spirit;p=leftforwardpaw}
+BearSpiritStompEff3:
+  Skills:
+  - skill{s=BearSpiritStompMain} @ModelPart{m=bear_spirit;p=righthindpaw}
+BearSpiritStompEff4:
+  Skills:
+  - skill{s=BearSpiritStompMain} @ModelPart{m=bear_spirit;p=lefthindpaw}
+BearSpiritEffectOn:
+  Skills:
+  - partvisibility{m=bear_spirit;p=sweep_effect;v=true} @self
+BearSpiritEffectOff:
+  Skills:
+  - partvisibility{m=bear_spirit;p=sweep_effect;v=false} @self
+
+BearSFuriousRoar:
+  Cooldown: 9999
+  Skills:
+  - sound{s=oakforest:bear_spirit.roar;v=2;delay=10} @self
+  - aura{auraName=SkillCasting;d=37}
+  - effect:particles{p=sneeze;a=1;hs=0.2;vs=0.2;repeatInterval=2;repeat=8;delay=12} @ModelPart{m=bear_spirit;p=fr_effect}
+  - effect:particles{p=reddust;color=#959d92;a=3;speed=0.3;hs=0.2;vs=0.2;repeatInterval=2;repeat=8;delay=12} @ModelPart{m=bear_spirit;p=fr_effect}
+  - effect:particlering{p=reddust;color=#ffffff;a=3;points=60;r=6;hs=0.2;y=0.1;vs=0.1;delay=13} @self
+  - effect:particlering{p=reddust;color=#ffffff;a=3;points=65;r=7;hs=0.2;y=0.1;vs=0.1;delay=14} @self
+  - effect:particlering{p=reddust;color=#ffffff;a=3;points=70;r=8;hs=0.2;y=0.1;vs=0.1;delay=16} @self
+  - effect:particles{p=explode;a=10;y=0.3;vs=0.3;hs=0.4;delay=16} @PIR{r=50}
+  - effect:particles{p=sculk_soul;a=6;y=2;vs=0.3;hs=0.5;delay=16} @PIR{r=50}
+  - potion{t=SLOW;l=10;d=37}
+  - state{m=bear_spirit;s=furious_roar;li=2;lo=5} 
+  - aura{auraName=HearedRoar;d=400;rd=true} @PIR{r=50}
+  - skill{s=BearSFRrenew;delay=16}
+BearSFRrenew:
+  Skills:
+  - skill{s=[
+            - potion{t=SLOW;l=0;d=40;p=false}
+            - potion{t=WEAKNESS;l=0;d=40;p=false}
+            - aura{auraName=HearedRoar;d=400;rd=true}
+            ]} @PIR{r=50;conditions=[  - hasaura{aura=HearedRoar} ]}
+  - delay 35
+  - skill{s=BearSFRrenew}
+
+BearSAttack:
+  Cooldown: 1
+  Skills:
+  - aura{auraName=SkillCasting;d=18} @self
+  - randomskill{s=[
+                  - sound{s=oakforest:bear_spirit.attack;v=0.6;p=1.2}
+                  ],[
+                  - sound{s=oakforest:bear_spirit.attack;v=0.6;p=1}
+                  ],[
+                  - sound{s=oakforest:bear_spirit.attack;v=0.6;p=0.9}
+                  ],[
+                  - sound{s=oakforest:bear_spirit.attack;v=0.6;p=0.8}
+                  ],} @self
+  - skill{s=[
+            - aura{auraName=SecondAttack;d=60;delay=1} @self
+            - state{m=bear_spirit;s=attack1;li=3;lo=2} @self
+            - potion{t=SLOW;l=10;d=17;delay=1} @self
+            - delay 8
+            - skill{s=[
+                      - damage{a=<caster.var.damage>}
+                      - effect:particles{p=reddust;color=#510000;a=8;y=0.6;hs=0.3;vs=0.3}
+                      - effect:particles{p=sweepAttack;a=2;y=0.6;hs=0.3;vs=0.4}
+                      - sound{s=entity.player.attack.crit;p=0.1;v=0.7}
+                      ]} @PIR{r=4.5;conditions=[  - fov{angle=120} ]}
+            ]} ?!hasaura{aura=SecondAttack}
+  - skill{s=[
+            - auraremove{aura=SecondAttack} @self
+            - state{m=bear_spirit;s=attack2;li=3;lo=2} @self
+            - potion{t=SLOW;l=10;d=17;delay=1} @self
+            - delay 8
+            - skill{s=[
+                      - damage{a=<caster.var.damage>}
+                      - effect:particles{p=reddust;color=#510000;a=8;y=0.6;hs=0.3;vs=0.3}
+                      - effect:particles{p=sweepAttack;a=2;y=0.6;hs=0.3;vs=0.4}
+                      - sound{s=entity.player.attack.crit;p=0.1;v=0.7}
+                      ]} @PIR{r=4.5;conditions=[  - fov{angle=120} ]}
+            ]} ?hasaura{aura=SecondAttack}
+
+BearSNatureRecover:
+  Cooldown: 15
+  Skills:
+  - sound{s=oakforest:bear_spirit.nature_recover;v=0.4} @self
+  - aura{auraName=SkillCasting;d=39} @self
+  - stun{d=39} @self
+  - potion{t=SLOW;l=10;d=39} @self
+  - state{m=bear_spirit;s=nature_recover;li=3;lo=3} @self
+  - effect:particles{p=sneeze;a=1;hs=0.2;vs=0.2;repeatInterval=2;repeat=8;delay=12} @ModelPart{m=bear_spirit;p=fr_effect}
+  - effect:particles{p=reddust;color=#959d92;a=3;speed=0.3;hs=0.2;vs=0.2;repeatInterval=2;repeat=8;delay=12} @ModelPart{m=bear_spirit;p=fr_effect}
+  - effect:particlering{p=reddust;color=#3b6032;r=4;points=40;a=3;hs=0.3;vs=0.1;y=0.1;delay=10} @self
+  - effect:particlering{p=reddust;color=#3b6032;r=5;points=55;a=3;hs=0.3;vs=0.1;y=0.1;delay=12} @self
+  - effect:particlering{p=reddust;color=#3b6032;r=6;points=70;a=3;hs=0.3;vs=0.1;y=0.1;delay=14} @self
+  - delay 15 
+  - summon{t=ForestSpiritSpawner;a=1;r=6;os=true;repeat=3;repeatInterval=8} @self
+  
+BearLeap:
+  Cooldown: 20
+  Skills:
+  - state{m=bear_spirit;s=leap_start;li=3;lo=4} @self
+  - potion{t=SLOW;d=99999;l=10;p=false;force=true} @self
+  - aura{auraName=SkillCasting;d=100} @self
+  - sound{s=oakforest:bear_spirit.leap} @self
+  - delay 21
+  - look{headOnly=false;immediately=true;repeat=10;repeatInterval=1} @target
+  - jump{v=1.5} @self
+  - leap{v=300;delay=1}
+  - delay 2
+  - skill{s=BearLeapEnd;repeatInterval=2;repeat=20} @self
+BearLeapEnd:
+  Conditions:
+  - onblock{m=AIR} false
+  - hasaura{aura=BearFell} false
+  Skills:
+  - aura{auraName=BearFell;d=50} @self
+  - delay 2
+  - state{m=bear_spirit;s=leap_start;r=true} @self
+  - state{m=bear_spirit;s=leap_finish;lo=4} @self
+  - sound{s=oakforest:bear_spirit.leapstomp} @self
+  - effect:particles{p=explode;a=80;hs=3;vs=0.2;y=0.2} @self
+  - effect:particlering{p=explode;a=1;y=0.1;points=40;r=6} @self
+  - effect:particles{p=reddust;color=#47643f;a=60;hs=3;vs=0.2;y=0.2} @self
+  - effect:particles{p=block_crack;m=grass;a=80;hs=3;vs=0.2;y=0.2} @self
+  - skill{s=[
+            - damage{a="<caster.var.damage>*2";pk=true}
+            - throw{v=5;vy=6}
+            - potion{t=SLOW;l=2;d=60;p=false}
+            ]} @PIR{r=6}
+  - delay 16
+  - potion{t=SLOW;l=0;d=1;force=true} @self
+  - auraremove{aura=SkillCasting} @self
+
+# 0493WMU5CGGXPZRN6946NG
