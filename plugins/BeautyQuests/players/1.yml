@@ -1,0 +1,33 @@
+identifier: b1616f7d-20ba-3499-aea3-59ab27d4941c
+pools:
+- completedQuests: !!set
+    0: null
+    1: null
+  poolID: 0
+  lastGive: 1754024583608
+- completedQuests: !!set
+    5: null
+  poolID: 1
+  lastGive: 1740316078778
+quests:
+- questID: 0
+  timer: 1754024547187
+  questFlow: 0:0
+  timesFinished: 7
+- questID: 1
+  timer: 1754024655891
+  questFlow: 0:0
+  timesFinished: 7
+- questID: 2
+  questFlow: 0:0
+  timesFinished: 4
+- questID: 3
+  questFlow: 0:0
+  timesFinished: 3
+- questID: 4
+  questFlow: 0:0
+  timesFinished: 2
+- questID: 5
+  timer: 1754023361154
+  questFlow: 0:0
+  timesFinished: 3

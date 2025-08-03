@@ -1,0 +1,28 @@
+hideNoRequirements: true
+endRewards:
+- id: moneyReward
+  money: 27.0
+- id: skillAPI-exp
+  xp: 55
+scoreboard: false
+timer: 0
+name: §eTrẻ Trâu
+endMsg: §6<§e§lQuests§6> §aBạn đã hoàn thành nhiệm vụ §e{quest_name} §agiờ bạn có
+  thể nhận nhiệm vụ mới!
+repeatable: true
+startMessage: §6<§e§lQuests§6> §aBạn đã bắt đầu nhiệm vụ đánh §e{quest_name}
+pool: 1
+manager:
+  branches:
+    '0':
+      stages:
+        '0':
+          objects:
+            b5b3a208-c70d-44bb-8faa-9e7ffb07785b:
+              amount: 22
+              object:
+                factoryName: mythicMobs
+                value: K2Q2
+          stageType: MOBS
+      endingStages: {}
+id: 4

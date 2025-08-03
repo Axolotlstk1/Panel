@@ -1,0 +1,238 @@
+[04:36:00] ---- BEAUTYQUESTS LOGGER - OPENED Fri Aug 01 04:36:00 UTC 2025 ----
+[04:36:22] [INFO] Enabling BeautyQuests v1.0.4
+[04:36:22] [INFO] ------------ BeautyQuests ------------
+[04:36:22] [DEBUG] Paper detected.
+[04:36:22] [INFO] Loaded valid Minecraft version 1_18_R2.
+[04:36:22] [DEBUG] Loading data file, last time edited : Mon Jun 16 01:47:50 UTC 2025
+[04:36:23] [INFO] Loaded language en_US (0.019s)!
+[04:36:23] [WARNING] Loading of start particles failed: Invalid particle, color or shape.
+[04:36:23] [ERROR] new #0: java.lang.IllegalArgumentException: No enum constant org.bukkit.Particle.DUST
+	at java.base/java.lang.Enum.valueOf(Enum.java:293)
+	at org.bukkit.Particle.valueOf(Particle.java:9)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.utils.ParticleEffect.deserialize(ParticleEffect.java:129)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.QuestsConfigurationImplementation.loadParticles(QuestsConfigurationImplementation.java:166)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.QuestsConfigurationImplementation.init(QuestsConfigurationImplementation.java:114)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.BeautyQuests.loadConfigParameters(BeautyQuests.java:385)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.BeautyQuests.onEnable(BeautyQuests.java:150)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:264)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:370)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:541)
+	at org.bukkit.craftbukkit.v1_18_R2.CraftServer.enablePlugin(CraftServer.java:560)
+	at org.bukkit.craftbukkit.v1_18_R2.CraftServer.enablePlugins(CraftServer.java:474)
+	at net.minecraft.server.MinecraftServer.loadWorld0(MinecraftServer.java:665)
+	at net.minecraft.server.MinecraftServer.loadLevel(MinecraftServer.java:432)
+	at net.minecraft.server.dedicated.DedicatedServer.e(DedicatedServer.java:316)
+	at net.minecraft.server.MinecraftServer.w(MinecraftServer.java:1164)
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:316)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+[04:36:23] [INFO] Loaded start particles: REDSTONE in shape POINT with color R255 G255 B0
+[04:36:23] [WARNING] Loading of talk particles failed: Invalid particle, color or shape.
+[04:36:23] [ERROR] new #1: java.lang.IllegalArgumentException: No enum constant org.bukkit.Particle.HAPPY_VILLAGER
+	at java.base/java.lang.Enum.valueOf(Enum.java:293)
+	at org.bukkit.Particle.valueOf(Particle.java:9)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.utils.ParticleEffect.deserialize(ParticleEffect.java:129)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.QuestsConfigurationImplementation.loadParticles(QuestsConfigurationImplementation.java:166)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.QuestsConfigurationImplementation.init(QuestsConfigurationImplementation.java:116)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.BeautyQuests.loadConfigParameters(BeautyQuests.java:385)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.BeautyQuests.onEnable(BeautyQuests.java:150)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:264)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:370)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:541)
+	at org.bukkit.craftbukkit.v1_18_R2.CraftServer.enablePlugin(CraftServer.java:560)
+	at org.bukkit.craftbukkit.v1_18_R2.CraftServer.enablePlugins(CraftServer.java:474)
+	at net.minecraft.server.MinecraftServer.loadWorld0(MinecraftServer.java:665)
+	at net.minecraft.server.MinecraftServer.loadLevel(MinecraftServer.java:432)
+	at net.minecraft.server.dedicated.DedicatedServer.e(DedicatedServer.java:316)
+	at net.minecraft.server.MinecraftServer.w(MinecraftServer.java:1164)
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:316)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+[04:36:23] [INFO] Loaded talk particles: VILLAGER_HAPPY in shape BAR
+[04:36:23] [WARNING] Loading of next particles failed: Invalid particle, color or shape.
+[04:36:23] [ERROR] new #2: java.lang.IllegalArgumentException: No enum constant org.bukkit.Particle.SMOKE
+	at java.base/java.lang.Enum.valueOf(Enum.java:293)
+	at org.bukkit.Particle.valueOf(Particle.java:9)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.utils.ParticleEffect.deserialize(ParticleEffect.java:129)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.QuestsConfigurationImplementation.loadParticles(QuestsConfigurationImplementation.java:166)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.QuestsConfigurationImplementation.init(QuestsConfigurationImplementation.java:119)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.BeautyQuests.loadConfigParameters(BeautyQuests.java:385)
+	at beautyquests-1.0.4.jar//fr.skytasul.quests.BeautyQuests.onEnable(BeautyQuests.java:150)
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:264)
+	at org.bukkit.plugin.java.JavaPluginLoader.enablePlugin(JavaPluginLoader.java:370)
+	at org.bukkit.plugin.SimplePluginManager.enablePlugin(SimplePluginManager.java:541)
+	at org.bukkit.craftbukkit.v1_18_R2.CraftServer.enablePlugin(CraftServer.java:560)
+	at org.bukkit.craftbukkit.v1_18_R2.CraftServer.enablePlugins(CraftServer.java:474)
+	at net.minecraft.server.MinecraftServer.loadWorld0(MinecraftServer.java:665)
+	at net.minecraft.server.MinecraftServer.loadLevel(MinecraftServer.java:432)
+	at net.minecraft.server.dedicated.DedicatedServer.e(DedicatedServer.java:316)
+	at net.minecraft.server.MinecraftServer.w(MinecraftServer.java:1164)
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:316)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+[04:36:23] [INFO] Loaded next particles: SMOKE_NORMAL in shape SPOT
+[04:36:23] [DEBUG] Initializing default stage types.
+[04:36:23] [DEBUG] Stage registered (Mobs, 0)
+[04:36:23] [DEBUG] Stage registered (Mine, 1)
+[04:36:23] [DEBUG] Stage registered (Place, 2)
+[04:36:23] [DEBUG] Stage registered (Chat, 3)
+[04:36:23] [DEBUG] Stage registered (InteractBlock, 4)
+[04:36:23] [DEBUG] Stage registered (InteractLocation, 5)
+[04:36:23] [DEBUG] Stage registered (Fish, 6)
+[04:36:23] [DEBUG] Stage registered (Melt, 7)
+[04:36:23] [DEBUG] Stage registered (Enchant, 8)
+[04:36:23] [DEBUG] Stage registered (Craft, 9)
+[04:36:23] [DEBUG] Stage registered (Bucket, 10)
+[04:36:23] [DEBUG] Stage registered (StageLocation, 11)
+[04:36:23] [DEBUG] Stage registered (PlayTime, 12)
+[04:36:23] [DEBUG] Stage registered (Breed, 13)
+[04:36:23] [DEBUG] Stage registered (Tame, 14)
+[04:36:23] [DEBUG] Stage registered (Death, 15)
+[04:36:23] [DEBUG] Stage registered (DealDamage, 16)
+[04:36:23] [DEBUG] Stage registered (EatDrink, 17)
+[04:36:23] [DEBUG] Initializing default quest options.
+[04:36:23] [DEBUG] Quest option registered (id: pool)
+[04:36:23] [DEBUG] Quest option registered (id: name)
+[04:36:23] [DEBUG] Quest option registered (id: description)
+[04:36:23] [DEBUG] Quest option registered (id: customItem)
+[04:36:23] [DEBUG] Quest option registered (id: confirmMessage)
+[04:36:23] [DEBUG] Quest option registered (id: bypassLimit)
+[04:36:23] [DEBUG] Quest option registered (id: startableFromGUI)
+[04:36:23] [DEBUG] Quest option registered (id: failOnDeath)
+[04:36:23] [DEBUG] Quest option registered (id: cancellable)
+[04:36:23] [DEBUG] Quest option registered (id: cancelActions)
+[04:36:23] [DEBUG] Quest option registered (id: scoreboard)
+[04:36:23] [DEBUG] Quest option registered (id: hideNoRequirements)
+[04:36:23] [DEBUG] Quest option registered (id: auto)
+[04:36:23] [DEBUG] Quest option registered (id: repeatable)
+[04:36:23] [DEBUG] Quest option registered (id: timer)
+[04:36:23] [DEBUG] Quest option registered (id: visibility)
+[04:36:23] [DEBUG] Quest option registered (id: endSound)
+[04:36:23] [DEBUG] Quest option registered (id: firework)
+[04:36:23] [DEBUG] Quest option registered (id: requirements)
+[04:36:23] [DEBUG] Quest option registered (id: startRewards)
+[04:36:23] [DEBUG] Quest option registered (id: startMessage)
+[04:36:23] [DEBUG] Quest option registered (id: endRewards)
+[04:36:23] [DEBUG] Quest option registered (id: endMsg)
+[04:36:23] [DEBUG] Initializing default item comparisons.
+[04:36:23] [DEBUG] Item comparison registered (id: bukkit)
+[04:36:23] [DEBUG] Item comparison registered (id: customBukkit)
+[04:36:23] [DEBUG] Item comparison registered (id: material)
+[04:36:23] [DEBUG] Item comparison registered (id: name)
+[04:36:23] [DEBUG] Item comparison registered (id: lore)
+[04:36:23] [DEBUG] Item comparison registered (id: enchants)
+[04:36:23] [DEBUG] Item comparison registered (id: repair)
+[04:36:23] [DEBUG] Initializing default rewards.
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: commandReward, class: fr.skytasul.quests.rewards.CommandReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: itemReward, class: fr.skytasul.quests.rewards.ItemReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: removeItemsReward, class: fr.skytasul.quests.rewards.RemoveItemsReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: textReward, class: fr.skytasul.quests.rewards.MessageReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: tpReward, class: fr.skytasul.quests.rewards.TeleportationReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: expReward, class: fr.skytasul.quests.rewards.XPReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: checkpointReward, class: fr.skytasul.quests.rewards.CheckpointReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: questStopReward, class: fr.skytasul.quests.rewards.QuestStopReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: requirementDependentReward, class: fr.skytasul.quests.rewards.RequirementDependentReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: randomReward, class: fr.skytasul.quests.rewards.RandomReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: wait, class: fr.skytasul.quests.rewards.WaitReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: titleReward, class: fr.skytasul.quests.rewards.TitleReward)
+[04:36:23] [DEBUG] Initializing default requirements.
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: logicalOr, class: fr.skytasul.quests.requirements.logical.LogicalOrRequirement)
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: questRequired, class: fr.skytasul.quests.requirements.QuestRequirement)
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: levelRequired, class: fr.skytasul.quests.requirements.LevelRequirement)
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: permissionRequired, class: fr.skytasul.quests.requirements.PermissionsRequirement)
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: scoreboardRequired, class: fr.skytasul.quests.requirements.ScoreboardRequirement)
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: equipmentRequired, class: fr.skytasul.quests.requirements.EquipmentRequirement)
+[04:36:23] [DEBUG] Initializing default stage options.
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-MOBS (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-MINE (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-PLACE_BLOCKS (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-FISH (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-MELT (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-ENCHANT (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-CRAFT (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-BUCKET (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-PLAY_TIME (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-BREED (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-TAME (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-DEAL_DAMAGE (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Quest object registered in registry stage-options-EAT_DRINK (id: progressbar, class: fr.skytasul.quests.stages.options.StageOptionProgressBar)
+[04:36:23] [DEBUG] Initializing default miscellenaeous.
+[04:36:23] [DEBUG] Mob factory registered (id: bukkitEntity)
+[04:36:23] [DEBUG] Bossbars manager has been registered: fr.skytasul.quests.utils.compatibility.BQBossBarImplementation
+[04:36:23] [DEBUG] Brigadier registered!
+[04:36:23] [DEBUG] Hooked into [Citizens] v2.0.32-SNAPSHOT (build 3135)
+[04:36:23] [DEBUG] Hooked into [MythicMobs] v5.6.1-${CI_COMMIT_SHORT_SHA}
+[04:36:23] [DEBUG] Hooked into [Fabled, ProSkillAPI, SkillAPI] v1.0.4-R0.1-SNAPSHOT
+[04:36:23] [DEBUG] Hooked into [Vault] v1.7.3-b131
+[04:36:23] [DEBUG] Hooked into [HolographicDisplays] v3.0.4
+[04:36:23] [DEBUG] Hooked into [PlaceholderAPI] v2.11.6
+[04:36:23] [DEBUG] Hooked into [WorldGuard] v7.0.7+216b061
+[04:36:23] [INFO] Adding citizens as an npc factory
+[04:36:23] [DEBUG] Stage registered (Talk, 18)
+[04:36:23] [DEBUG] Stage registered (Items, 19)
+[04:36:23] [DEBUG] Quest option registered (id: starterNPC)
+[04:36:23] [DEBUG] Quest option registered (id: startDialog)
+[04:36:23] [DEBUG] Quest option registered (id: hologramText)
+[04:36:23] [DEBUG] Quest option registered (id: hologramLaunch)
+[04:36:23] [DEBUG] Quest option registered (id: hologramLaunchNo)
+[04:36:23] [DEBUG] Mob factory registered (id: citizensNPC)
+[04:36:23] [DEBUG] Mob factory registered (id: mythicMobs)
+[04:36:23] [INFO] Adding mythicmobs as an npc factory
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: classRequired, class: fr.skytasul.quests.integrations.fabled.FabledClassRequirement)
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: skillAPILevelRequired, class: fr.skytasul.quests.integrations.fabled.FabledLevelRequirement)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: skillAPI-exp, class: fr.skytasul.quests.integrations.fabled.FabledXpReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: moneyReward, class: fr.skytasul.quests.integrations.vault.economy.MoneyReward)
+[04:36:23] [DEBUG] Quest object registered in registry rewards (id: permReward, class: fr.skytasul.quests.integrations.vault.permission.PermissionReward)
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: moneyRequired, class: fr.skytasul.quests.integrations.vault.economy.MoneyRequirement)
+[04:36:23] [DEBUG] Holograms manager has been registered: fr.skytasul.quests.integrations.BQHolographicDisplays3
+[04:36:23] [INFO] Placeholders registered !
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: placeholderRequired, class: fr.skytasul.quests.integrations.placeholders.PlaceholderRequirement)
+[04:36:23] [DEBUG] Now using WorldGuard entry API.
+[04:36:23] [DEBUG] Stage registered (Find, 20)
+[04:36:23] [DEBUG] Quest object registered in registry requirements (id: regionRequired, class: fr.skytasul.quests.integrations.worldguard.RegionRequirement)
+[04:36:23] [DEBUG] Started bStats metrics
+[04:36:23] [DEBUG] Starting Spigot updater
+[04:36:24] [DEBUG] Hooked into [MMOItems] v6.1 after primary initialization
+[04:36:24] [DEBUG] Item comparison registered (id: mmoItems)
+[04:36:27] [WARNING] *****************************************************
+[04:36:27] [WARNING] * There is a new version of BeautyQuests available!
+[04:36:27] [WARNING] *  
+[04:36:27] [WARNING] * Your version:   §c1.0.4
+[04:36:27] [WARNING] * Latest version: §a1.0.5
+[04:36:27] [WARNING] *  
+[04:36:27] [WARNING] * Please update to the newest version.
+[04:36:27] [WARNING] *  
+[04:36:27] [WARNING] * Download:
+[04:36:27] [WARNING] *   https://www.spigotmc.org/resources/39255
+[04:36:27] [WARNING] *  
+[04:36:27] [WARNING] * Support:
+[04:36:27] [WARNING] *   https://discord.gg/H8fXrkD
+[04:36:27] [WARNING] *  
+[04:36:27] [WARNING] * Donate:
+[04:36:27] [WARNING] *   https://paypal.me/SkytAsul
+[04:36:27] [WARNING] *****************************************************
+[04:36:28] [DEBUG] 0 accounts loaded and 9 identifiers.
+[04:36:28] [INFO] 6 quests loaded (0.055s)!
+[04:36:28] [INFO] Periodic saves task started (18000 ticks). Task ID: 1206
+[04:39:33] [DEBUG] axolotlstk (b1616f7d-20ba-3499-aea3-59ab27d4941c) joined the server
+[04:39:33] [DEBUG] Loading player axolotlstk...
+[04:39:34] [DEBUG] Loading account #1. Last file edition: Mon Jun 16 01:47:50 UTC 2025
+[04:39:34] [DEBUG] Completed load of axolotlstk (b1616f7d-20ba-3499-aea3-59ab27d4941c (#1)) datas within 220 ms (6 quests, 2 pools) | Loaded from file from index
+[04:42:41] [DEBUG] Next stage for player axolotlstk (coming from stage 0 (MOBS) of quest 5, branch 0) via f.s.q.utils.DebugUtils.stackTraces 11 -> f.s.q.utils.DebugUtils.stackTraces 11
+[04:42:41] [ADMIN]: Player axolotlstk has finished the stage 0 of quest 5
+[04:42:41] [ADMIN]: axolotlstk is completing the quest 5
+[04:48:15] [DEBUG] NPC citizens#9: 1 pools, result: java.util.concurrent.CompletableFuture@28317a4f[Not completed]
+[04:48:15] [DEBUG] axolotlstk has opened inventory fr.skytasul.quests.api.gui.layout.LayoutedGUI$LayoutedTypeGUI.
+[04:51:25] [DEBUG] Saving 1 loaded accounts and 9 identifiers.
+[04:51:25] [DEBUG] Saved datas (0.004s)!
+[04:51:25] [INFO] Datas saved ~ periodic save
+[04:54:43] [DEBUG] axolotlstk left the server
+[04:54:43] [DEBUG] Unloading player axolotlstk... (6 quests, 2 pools)
+[04:54:50] [INFO] Disabling BeautyQuests v1.0.4
+[04:54:50] [INFO] Periodic saves task stopped.
+[04:54:50] [DEBUG] Saving 0 loaded accounts and 9 identifiers.
+[04:54:50] [DEBUG] Saved datas (0.0s)!
+[04:54:50] [DEBUG] Unregistered from WorldGuard entry API.
+[04:54:50] [DEBUG] Item comparison unregistered (id: mmoItems)
+[04:54:50] Logger was open during 18 minutes
+[04:54:50] ---- BEAUTYQUESTS LOGGER - CLOSED Fri Aug 01 04:54:50 UTC 2025 ----

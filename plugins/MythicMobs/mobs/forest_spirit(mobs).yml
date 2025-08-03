@@ -1,0 +1,26 @@
+ForestSpirit:
+  Type: Zombie
+  Display: '&2Forest &aspirit'
+  Health: 20
+  Options:
+    Silent: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+  Skills:
+  - model{m=forest_spirit} @self ~onSpawn
+  - partvisibility{m=forest_spirit;p=whip1;v=false} @self ~onSpawn
+  - partvisibility{m=forest_spirit;p=whip2;v=false} @self ~onSpawn
+  - partvisibility{m=forest_spirit;p=whip1_1;v=false} @self ~onSpawn
+  - partvisibility{m=forest_spirit;p=whip1_2;v=false} @self ~onSpawn
+  - setvariable{var=caster.damage;val=4} @self ~onSpawn                  #Set mob's damage here
+  - randomskill{s=[  - state{m=forest_spirit;s=hurt;li=3;lo=4} ],[  - state{m=forest_spirit;s=hurt1;li=3;lo=4} ]} @self ~onDamaged
+  - sound{s=entity.blaze.hurt;p=2;v=0.2} @self ~onDamaged >2% 
+  - sound{s=item.axe.strip;p=1;v=1} @self ~onDamaged >2%
+  
+  - skill{s=[
+            - cancelEvent
+            - skill{s=ForestSpiritAttack}
+            ];sync=true} @target ~onAttack
+  - skill{s=ForestSpiritDeath} @self ~onDeath

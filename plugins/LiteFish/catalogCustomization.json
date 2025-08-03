@@ -1,0 +1,97 @@
+{
+  "placeholders": {
+    "maxCatch": "§3%player_name% §6%amount%",
+    "maxWeight": "§3%player_name% §6%fish_name% §6%weight%",
+    "tournamentsWins": "§3%player_name%: §6%count%"
+  },
+  "maxSizeLeader": "§7Best size: §6%size% §3%player_name%",
+  "allCatchLeader": "§7Most caught: §6%amount% §3%player_name%",
+  "newFishMessage": "{#06BEFF}%chat.newFish% §7[%now_fish%§7]\n§7[%chat.openCatalog%]",
+  "catalogGui": {
+    "title": "%gui.catalog%: %player_name%",
+    "icons": [
+      {
+        "id": "1",
+        "displayName": "§6Vanilla fishing",
+        "lore": [],
+        "action": "switch_vanilla_mode"
+      },
+      {
+        "id": "2",
+        "displayName": "{#41FFE9}%gui.statistic%",
+        "lore": [
+          "{#21BBFF}%gui.goodFish%: {#0BFF9F}%amount%",
+          "{#21BBFF}%gui.failedFish%: {#FF1D4B}%amount%",
+          "{#21BBFF}%gui.monsterCatch%: {#FF1D4B}%amount%",
+          "{#21BBFF}%gui.bigLootCatch%: {#FFC30E}%amount%"
+        ],
+        "action": "profile"
+      },
+      {
+        "id": "3",
+        "lore": [],
+        "action": "category",
+        "modification": [
+          "show_biomes"
+        ]
+      },
+      {
+        "id": "example",
+        "material": "BLUE_STAINED_GLASS_PANE",
+        "displayName": "Display Name",
+        "lore": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    ],
+    "map": [
+      "1 0 0 0 2 0 0 0 0",
+      "0 3 3 3 3 3 3 3 0",
+      "0 3 3 3 3 3 3 3 0",
+      "0 3 3 3 3 3 3 3 0"
+    ]
+  },
+  "categoryGui": {
+    "title": "%gui.catalog%: %player_name%",
+    "icons": [
+      {
+        "id": "1",
+        "material": "FLINT",
+        "displayName": "§f%gui.back%",
+        "lore": [],
+        "action": "back"
+      },
+      {
+        "id": "3",
+        "material": "FLINT",
+        "displayName": "§f%gui.next%",
+        "lore": [],
+        "action": "next"
+      },
+      {
+        "id": "2",
+        "material": "STRUCTURE_VOID",
+        "displayName": "???",
+        "lore": [
+          "%rarity%",
+          "{#7E84F7}%total_caught%: §6%amount%",
+          "{#FFDC63}%chance%: §6%amount%",
+          "{#FF1046}%health%: §6%amount%",
+          "{#C667FF}%max_size%: §6%amount%",
+          "{#C667FF}%min_size%: §6%amount%"
+        ],
+        "action": "item"
+      }
+    ],
+    "map": [
+      "2 2 2 2 2 2 2 2 2",
+      "2 2 2 2 2 2 2 2 2",
+      "2 2 2 2 2 2 2 2 2",
+      "2 2 2 2 2 2 2 2 2",
+      "2 2 2 2 2 2 2 2 2",
+      "1 2 2 2 2 2 2 2 3"
+    ]
+  }
+}

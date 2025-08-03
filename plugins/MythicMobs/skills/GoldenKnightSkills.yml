@@ -1,0 +1,163 @@
+# Golden Knight Skill file
+#
+#
+KnightRandomHurtSound:
+    Skills:
+    - randomskill{skills=KnightHurtSound1,KnightHurtSound2,KnightHurtSound3,KnightHurtSound4}
+KnightHurtSound4: 
+    Skills:
+    - sound{s=custom.knighthurt4;v=0.1;sc=hostile}
+KnightHurtSound3: 
+    Skills:
+    - sound{s=custom.knighthurt3;v=0.1;sc=hostile}
+KnightHurtSound2: 
+    Skills:
+    - sound{s=custom.knighthurt2;v=0.1;sc=hostile}
+KnightHurtSound1: 
+    Skills:
+    - sound{s=custom.knighthurt1;v=0.1;sc=hostile}
+ChooseRandomSkillGoldenKnight:
+    Conditions:
+    - incombat true
+    Skills:
+    - randomskill{skills=AttackBigSwing,AttackJumpSwing,AttackShieldBash}
+ChooseRandomAttackGoldenKnight:
+    Skills:
+    - randomskill{skills=AttackShieldPunch,AttackSwing,AttackSwing}
+AttackShieldPunch:
+    Skills:
+    - state{mid=golden_knight;s=shield_punch;li=0;lo=0;r=false} @self   
+    - sound{s=custom.knightshieldbash;v=2;sc=hostile} @self
+AttackShieldBash:
+    Skills:
+    - runaigoalselector{goal=clear} @self
+    - runaitargetselector{target=clear} @self
+    - potion{type=SLOW;duration=45;lvl=10} @self
+    - state{mid=golden_knight;s=shield_bash;li=0;lo=0;r=false} @self
+    - delay 30
+    - sound{s=custom.knightshieldbash;v=2;sc=hostile} @self
+    - effect:particles{p=cloud;amount=90;speed=1;hS=1;vS=1;forwardOffset=+1.5} @self
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=11;i=1;hR=1;vR=1;hnp=false;sfo=0.5;hO=10;mr=12;hs=true;onEnd=ShieldBashBolt-End} @Forward{f=5;y=0.7}
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=11;i=1;hR=1;vR=1;hnp=false;sfo=0.5;hO=5;mr=12;hs=true;onEnd=ShieldBashBolt-End} @Forward{f=5;y=0.6}
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=11;i=1;hR=1;vR=1;hnp=false;sfo=0.5;mr=12;hs=true;onEnd=ShieldBashBolt-End} @Forward{f=5;y=0.5}
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=11;i=1;hR=1;vR=1;hnp=false;sfo=0.5;hO=-5;mr=12;hs=true;onEnd=ShieldBashBolt-End} @Forward{f=5;y=0.6}
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=11;i=1;hR=1;vR=1;hnp=false;sfo=0.5;hO=-10;mr=12;hs=true;onEnd=ShieldBashBolt-End} @Forward{f=5;y=0.7}
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=11;i=1;hR=1;vR=1;hnp=false;sfo=0.5;hO=10;mr=12;hs=true;onEnd=ShieldBashBolt-End} @Forward{f=5;y=0.7}
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=11;i=1;hR=1;vR=1;hnp=false;sfo=0.5;hO=5;mr=12;hs=true;onEnd=ShieldBashBolt-End} @Forward{f=5;y=0.6}
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=11;i=1;hR=1;vR=1;hnp=false;sfo=0.5;mr=12;hs=true;onEnd=ShieldBashBolt-End} @Forward{f=5;y=0.5}
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=11;i=1;hR=1;vR=1;hnp=false;sfo=0.5;hO=-5;mr=12;hs=true;onEnd=ShieldBashBolt-End} @Forward{f=5;y=0.6}
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=11;i=1;hR=1;vR=1;hnp=false;sfo=0.5;hO=-10;mr=12;hs=true;onEnd=ShieldBashBolt-End} @Forward{f=5;y=0.7}
+    - delay 20
+    - runaigoalselector{goal=meleeattack} @self
+    - runaitargetselector{target=players} @self
+JumpSwingProjectile:
+    Skills:
+    - delay 50
+    - projectile{onTick=SwingBolt-Tick;onHit=SwingBolt-Hit;v=10;i=1;hR=0.5;vR=5;mr=100;hs=true} @forward
+AttackJumpSwing:
+    Skills:
+    - runaigoalselector{goal=clear} @self
+    - runaitargetselector{target=clear} @self
+    - potion{type=SLOW;duration=115;lvl=10} @self
+    - state{mid=golden_knight;s=jump_swing;li=0;lo=0;r=false} @self
+    - skill{s=JumpSwingProjectile}
+    - delay 40
+    - sound{s=custom.knightjumpswing;v=3;sc=hostile} @self
+    - delay 10
+    - sound{s=entity.generic.explode;v=2;sc=hostile} @self
+    - effect:particles{particle=cloud;amount=200;hS=1.5;vS=0.01;speed=1} @self
+    - effect:particles{particle=sweep_attack;amount=15;hS=1.5;vS=0.01;speed=1} @self
+    - delay 1
+    - state{mid=golden_knight;s=exhaust;li=0;lo=0;r=false} @self
+    - delay 75
+    - runaigoalselector{goal=meleeattack} @self
+    - runaitargetselector{target=players} @self
+AttackBigSwing:
+    Skills:
+    - runaigoalselector{goal=clear} @self
+    - runaitargetselector{target=clear} @self
+    - potion{type=SLOW;duration=85;lvl=10} @self
+    - state{mid=golden_knight;s=big_swing;li=0;lo=0;r=false} @self
+    - sound{s=custom.knightbigswing;v=2;sc=hostile} @self
+    - delay 15
+    - summon{type=ProjectileSwingTargeterx;amount=1;radius=0} @Forward{f=1;y=0.0}
+    - delay 15
+    - state{mid=golden_knight;s=exhaust2;li=0;lo=0;r=false} @self
+    - delay 50
+    - runaigoalselector{goal=meleeattack} @self
+    - runaitargetselector{target=players} @self
+ProjectileSwingR2L1:
+  Skills:
+    - setstance{s=small} @self
+    - delay 1
+    - projectile{oT=ProjectileSwing-Tick;sfo=0.685;syo=1.5;sso=2.400;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=0.795;syo=1.5;sso=2.200;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=0.890;syo=1.5;sso=2.000;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=0.970;syo=1.5;sso=1.800;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.035;syo=1.5;sso=1.600;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - setstance{s=small} @self
+    - delay 1
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.095;syo=1.5;sso=1.400;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.145;syo=1.5;sso=1.200;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.185;syo=1.5;sso=1.000;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.215;syo=1.5;sso=0.800;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.235;syo=1.5;sso=0.600;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - setstance{s=medium} @self
+    - delay 1
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.245;syo=1.5;sso=0.400;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.250;syo=1.5;sso=0.200;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.250;syo=1.5;sso=0.000;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.250;syo=1.5;sso=-0.200;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.245;syo=1.5;sso=-0.400;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - setstance{s=medium} @self
+    - delay 1
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.235;syo=1.5;sso=-0.600;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.215;syo=1.5;sso=-0.800;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.185;syo=1.5;sso=-1.000;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.145;syo=1.5;sso=-1.200;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.095;syo=1.5;sso=-1.400;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - setstance{s=large} @self
+    - delay 1
+    - projectile{oT=ProjectileSwing-Tick;sfo=1.035;syo=1.5;sso=-1.600;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=0.970;syo=1.5;sso=-1.800;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=0.890;syo=1.5;sso=-2.000;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=0.795;syo=1.5;sso=-2.200;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - projectile{oT=ProjectileSwing-Tick;sfo=0.685;syo=1.5;sso=-2.400;v=0;i=1;d=2;sb=false;onHit=ProjectileSwing-Hit}
+    - delay 1
+ 
+ProjectileSwing-Tick:
+  Skills:
+    - effect:particles{p=crit;a=5;hS=0.01;vS=0.01;size=0.50;speed=0.01} @origin ?stance{s=small}
+    - effect:particles{p=crit;a=5;hS=0.01;vS=0.01;size=0.50;speed=0.01} @origin ?stance{s=small}
+ 
+    - effect:particles{p=crit;a=5;hS=0.03;vS=0.03;size=0.75;speed=0.01} @origin ?stance{s=medium}
+    - effect:particles{p=crit;a=5;hS=0.03;vS=0.03;size=0.75;speed=0.01} @origin ?stance{s=medium}
+ 
+    - effect:particles{p=crit;a=5;hS=0.05;vS=0.05;size=1.00;speed=0.01} @origin ?stance{s=large}
+    - effect:particles{p=crit;a=5;hS=0.05;vS=0.05;size=1.00;speed=0.01} @origin ?stance{s=large}
+ProjectileSwing-Hit:
+    Skills:
+    - damage{a=25} 
+AttackSwing:
+    Skills:
+    - state{mid=golden_knight;s=swing;li=0;lo=0;r=false} @self
+    - sound{s=custom.knightswing;v=2;sc=hostile} @self
+ShieldBashBolt:
+    Skills:
+    - projectile{onTick=ShieldBashBolt-Tick;onHit=ShieldBashBolt-Hit;v=5;i=1;hR=0.5;vR=5;mr=100}
+ShieldBashBolt-Tick:
+    Skills:
+    - effect:particles{p=crit;amount=10;speed=0;hS=0.25;vS=0.01} @origin
+
+ShieldBashBolt-Hit:
+    Skills:
+    - damage{a=5} 
+SwingBolt:
+    Skills:
+    - projectile{onTick=SwingBolt-Tick;onHit=SwingBolt-Hit;v=5;i=1;hR=0.5;vR=5;mr=100}
+SwingBolt-Tick:
+    Skills:
+    - effect:particles{p=crit;amount=90;speed=0;hS=0.01;vS=5} @origin
+SwingBolt-Hit:
+    Skills:
+    - damage{a=22} 
